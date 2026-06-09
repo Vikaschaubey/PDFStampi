@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Signature Stamper</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h1>PDF Signature Stamper</h1>
+
+        <div class="control-group">
+            <label><b>Select PDF</b></label>
+            <input type="file" id="pdfInput" accept=".pdf">
+        </div>
+
+        <div class="control-group">
+            <label><b>Select Signature / Stamp</b></label>
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+
+        <div class="control-group">
+            <button id="downloadBtn">Download Stamped PDF</button>
+        </div>
+
+        <div class="info">
+            Upload PDF → Upload Signature → Drag Signature → Download PDF
+        </div>
+    </div>
+
+    <div class="preview-panel">
+        <div id="pdfContainer">
+            <img id="stamp">
+            <div id="pages"></div>
+        </div>
+        <div class="page-actions">
+            <button id="prevPageBtn" disabled>Previous Page</button>
+            <span id="pageIndicator">Page 0 / 0</span>
+            <button id="nextPageBtn" disabled>Next Page</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
